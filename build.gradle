@@ -1,0 +1,31 @@
+plugins {
+    id 'java-library' 
+}
+
+repositories {
+    jcenter() 
+}
+
+dependencies {
+
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+compileJava.options.encoding = 'UTF-8'
+
+jar {
+    exclude('javax/**')
+    manifest {
+        attributes(
+            'MIDlet-1'       : "NFSMW, /icon.png, AppMain",
+            'MIDlet-Data-Size': "1024",
+            'MIDlet-Name' : "NFSMW",
+            'MIDlet-Vendor'     : "Electronic Arts",
+            'MicroEdition-Configuration'      : "CLDC-1.1",
+            'MicroEdition-Profile'       : "MIDP-2.0",
+            'MIDlet-Version'       : "1.0.2",
+            'MIDlet-Icon'       : "icon.png"
+        )
+    }
+}
